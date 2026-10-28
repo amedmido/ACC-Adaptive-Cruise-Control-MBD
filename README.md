@@ -10,12 +10,16 @@ An automotive longitudinal control project developed in **MATLAB/Simulink** foll
 * **ACC Controller:** Computes required acceleration/deceleration commands based on safety headway distance ($d_{safe} = d_0 + T_{gap} \cdot v$) and speed error.
 * **Vehicle Dynamics Plant:** Models vehicle mass, aerodynamic drag, rolling resistance, and actuator response in closed-loop simulation.
 * **Automated Code Generation:** Deployed Embedded Coder / Simulink Coder to produce production-grade ANSI C source files from the standalone atomic controller module.
+  ### System Architecture & Model
+![ACC Simulink Model](ACC_System_Simulink.png)
 
 ---
 
 ## 📊 Key Highlights & Results
 
 * **Closed-Loop Stability:** Verified smooth throttle and braking dynamics without control oscillations during rapid deceleration scenarios.
+  ### Simulation Results & Scopes
+![Simulation Scopes](Scopes.png)
 * **Production C Code:** Generated clean C functions (`step` and `initialize`) ready for automotive ECU integration.
 * **Model-Based Verification:** Full Model-in-the-Loop (MIL) dynamic validation.
 
